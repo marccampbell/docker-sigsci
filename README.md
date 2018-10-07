@@ -13,7 +13,7 @@ docker run \
     -e SIGSCI_HOSTNAME=<...> \
     -e SIGSCI_RPC_ADDRESS=unix:/var/run/sigsci/sigsci.sock \
     -v /var/run/sigsci:/var/run/sigsci \
-    replicated/sigsci-agent
+    marc/sigsci-agent
 ```
 
 ## Module Initialization
@@ -26,6 +26,6 @@ All configuration items on https://docs.signalsciences.net/install-guides/agent-
 Alternatively, if you'd prefer to use an agent.conf file to manage config, can you create that and mount it into the container:
 
 ```
-docker run -v `path-to-agent.conf`/etc/sigsci/agent.conf replicated/sigsci-agent
+docker run -v `path-to-agent.conf`/etc/sigsci/agent.conf marc/sigsci-agent
 ```
 
